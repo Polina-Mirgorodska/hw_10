@@ -76,3 +76,23 @@ function processMovies(movies, action) {
         index += 1;
     }
 }
+
+const showTitle = (movie, index) => {
+  console.log(`${index + 1}. ${movie.title}`);
+}
+
+const checkRating = (movie, index) => {
+  if (movie.rating >= 8.5) {
+    console.log(`${movie.title} високий рейтинг!`);
+  }
+};
+
+const showDetails = (movie, index) => {
+  console.log(
+    `${index + 1}: ${movie.title} (${movie.year}), рейтинг: ${movie.rating}`
+  );
+};
+
+processMovies(movies, showTitle);
+processMovies(movies, showDetails);
+processMovies(movies, checkRating);
